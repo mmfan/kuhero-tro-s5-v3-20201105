@@ -1,0 +1,16 @@
+{
+    "inbounds": 
+    [
+        {
+            "port": 4234,"listen": "127.0.0.1","protocol": "vmess",
+            "settings": {"clients": [{"id": "$AUUID"}]},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "$VMESSPATH"}}
+        },
+	{
+            "port": 5234,"listen": "127.0.0.1","protocol": "vless",
+            "settings": {"clients": [{"id": "$AUUID"}],"decryption": "none"},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "$VLESSPATH"}}
+        }
+    ],
+    "outbounds": [{"protocol": "freedom"}]
+}
